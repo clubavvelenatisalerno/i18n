@@ -1,0 +1,294 @@
+# Translation information:
+# 
+#  - Only translate the parts in quotes "like this".
+#  - All values must be kept in the same order with the same indentation and gaps.
+#  - Parts of text looking like this %{code} must not be changed as they are used
+#    for merging. They may be repositioned to make the sentence structure correct.
+#  - Things like &copy; are HTML codes that translate to symbols on the page.
+#  - \n is a code for a new line.
+#  - Text surrounded by ** becomes bold (but not everywhere).
+#  - URLs (links) should be kept the same.
+# 
+#    Thank you!
+
+de-DE:
+
+  org:
+    name: "Bookwhen Ltd"
+    link: "http://bookwhen.com"
+
+  controllers:
+    concerns:
+      site_concern:
+        site_not_found: "Seite nicht gefunden"
+      user_concern:
+        token_expired: "Session abgelaufen. Bitte melden Sie sich neu an."
+        admin_only: "Diese Funktion ist nur für Administratoren verfügbar."
+      booking_concern:
+        booking_required: "Buchung nicht gefunden"
+
+  sites:
+    title_bar:
+      save_changes: "Änderungen speichern"
+      title_label: "Titel"
+      description_label: "Allgemeine Informationen"
+      setup_theme_title: "Öffentlicher Terminplan"
+      setup_theme_desc: |
+        **_READ ME:_** Sie können Titel, Logo und Hintergrundbild ändern indem Sie auf **'Seite bearbeiten'** rechts oben klicken. 
+
+  general:
+    api_error: "Ein Fehler ist aufgetreten! Wir wurden darüber informiert und werden uns darum kümmern. Bitte versuchen Sie es später nocheinmal."
+    cookie_error: "Cookies müssen aktiviert sein um eine Buchung durchzuführen. Bitte versuchen Sie die Seite neu zu laden."
+    show_more_text: "[Weiterlesen]"
+
+  duration:
+    days:
+      one: "1 Tag"
+      other: "%{count} Tage"
+    weeks:
+      one: "1 Woche"
+      other: "%{count} Wochen"
+
+  login:
+    failed: "oder Email waren falsch."
+
+  layouts:
+    title:
+      default: "Kommende Veranstaltungen"
+      postfix: "Booking by Bookwhen" 
+    header:
+      login: "Anmelden"
+      logout: "Abmelden"
+      edit_page: "Seite bearbeiten"
+      admin_site: "Admin"
+      set_header_photo: "Hintergrundbild ändern"
+      delete_header_photo: "Löschen"
+      delete_header_photo_confirm: "Wollen Sie das Hintergrundbild wirklich löschen?"
+      set_logo: "Logo ändern"
+      delete_logo: "Löschen"
+      delete_logo_confirm: "Wollen Sie das Logo wirklich löschen?"
+    breadcrumbs:
+      schedule: "Terminplan"
+      event: "Veranstaltung"
+      course: "Kurs"
+      basket: "Ausgewählte Artikel"
+      form: "Details"
+      password: "Passwort"
+      payment: "Zahlung"
+      done: "Erledigt"
+      complete: "Durchgeführt"
+    footer:
+      copyright: "Copyright &copy; %{year} %{org_link}"
+      about: "Über Bookwhen"
+      privacy: "Datenschutz"
+      terms: "Nutzungsbedingungen"
+
+  oauth:
+    oauth:
+      callback:
+        logged_in: "Angemeldet"
+      logout:
+        logged_out: "Abgemeldet"
+
+  sessions:
+    destroy:
+      session_destroyed: "Abgemeldet"
+
+  agenda_list:
+    show:
+      from_date: "Ab %{date}"
+      from_today: "Datum auswählen"
+      timezone_info: "Zeitzone: %{zone}"
+    rows:
+      no_records: "Keine Veranstaltungen"
+    row:
+      fully_booked: "Ausgebucht"
+      user_booked: "Sie haben diese Veranstaltung bereits gebucht"
+    foot:
+      show_more: "Mehr anzeigen..."
+      
+  events:
+    show:
+      not_found: "Die Veranstaltung wurde nicht gefunden"
+
+  courses:
+    show:
+      not_found: "Der Kurs wurde nicht gefunden"
+
+  baskets:
+    show:
+      basket_error: "Es gab ein Problem mit dem Zugiff auf die ausgewählten Tickets. Bitte versuchen Sie es später erneut oder kontaktieren Sie support@bookwhen.com"
+      basket_empty: "Der Waarenkorb ist leer. Zurück zum [Terminplan](%{home_path})."
+      start_checkout: "Jetzt buchen"
+      start_checkout_wait: "Bitte warten..."
+      start_booking_info: |
+        - Das Ticket wird für Sie reserviert sobald Sie es in den Waarenkorb legen.
+        - Teilnehmerinformationen und Zahlungsdaten (falls vom Veranstalter gefordert) sind notwendig um die Buchung abzuschließen.
+      not_found: "Es wurden Tickets aus dem Waarenkorb entfernt da diese nicht länger verfügbar sind. Bitte gehen Sie zurück zum Terminplan und versuchen Sie es erneut. Vielen Dank."
+      no_items: "Die Tickets in ihrem Waarenkorb sind nicht länger verfügbar. Bitte gehen Sie zurück zum Terminplan und versuchen Sie es erneut. Vielen Dank."
+    table:
+      title: "Ausgewählte Tickets"
+      tickets_cost: "Summe Tickets"
+      booking_fee: "Buchungsgebühr"
+      total_cost: "Gesamtsumme"
+      delete_item: "Ticket entfernen"
+      confirm_delete: "Wollen Sie dieses Ticket wirklich entfernen?"
+    row:
+      attendee_counts: "(%{counts} Personen)"
+    show_button:
+      start_booking: "Fortfahren"
+
+  select_button:
+    new_booking: "Select"
+    unavailable: "Nicht verfügbar"
+    number_added: "%{count}"
+    increment: "+"
+    no_more: "+"
+    decrement: "-"
+    sold_out: "Ausverkauft"
+    group_info:
+      "%{ticket_count}, %{person_count}"
+    ticket:
+      one: "1 Ticket"
+      other: "%{count} Tickets"
+    person:
+      one: "1 Person"
+      other: "%{count} Personen"
+
+  event_course:
+    preview:
+      view: "Details anzeigen"
+      course_summary_info: "**Kurs** mit **%{total}** Terminen:"
+      tickets_list: "Tickets / Buchungsarten"
+      spaces_available: "%{spaces} Plätze verfügbar"
+      only_spaces_available: "Nur mehr %{spaces} Plätze verfügbar"
+      last_space_available: "Nur mehr 1 Platz verfügbar"
+      no_spaces_available: "Ausgebucht"
+      one_slot_open: "Einzelplatz verfügbar"
+      one_slot_closed: "Platz bereits belegt"
+    show:
+      course_summary_info: "**Kurs** mit **%{total}** Terminen:"
+      details: "Details"
+      tickets: "Tickets / Buchungsarten"
+      location: "Ort"
+      cost: "Preis"
+      fee: "Gebühr"
+    details_summary:
+      details: "Details"
+      attachments: "Dokumente"
+
+  bookings:
+    create:
+      basket_empty_error: "Der Waarenkorb scheint leer zu sein. Bitte versuchen Sie die Seite neu zu laden."
+      validation_error: "Buchung kann nicht gestartet werden"
+    complete_banner:
+      title: "Buchung durchgeführt"
+      booking_ref: "Buchungsreferenz:"
+      footer_text: |
+        Sie können auf Ihre Buchung über den Link in der Email-Bestätigung zugreifen.
+        
+        Vielen Dank für die Buchung.
+    cancelled_banner:
+      title: "Buchung storniert"
+      booking_ref: "Buchungsreferenz:"
+      footer_text: |
+        Die Buchung wurde storniert.
+    overview:
+      booked_by: "Gebucht von:"
+      title: "Buchungsdetails"
+      person: "Person"
+    post_booking_info:
+      title: "Zusätzliche Informationen"
+    cancel:
+      error: "Die Stornierung ist fehlgeschlagen."
+      
+  booking_passwords:
+    form:
+      title: "Buchungspasswort"
+      password_label: "Veranstaltungspasswort"
+      password_help: "Bitte geben Sie das Passwort für diese Veranstaltung ein."
+      continue: "Weiter"
+    update:
+      passwords_ok: "Passwort verifiziert"
+
+  booking_details:
+    form:
+      booking_fields: "Buchungsdetails"
+      attendee_number: "%{ordinalized_number} Teilnehmer"
+      booker_label: "Sind Sie das?"
+      booker_help: "Bitte ankreuzen, wenn Sie für sich selbst buchen."
+      no_attendee_fields: "Keine Teilnehmerdaten erforderlich."
+      continue: "Weiter"
+    person_booking:
+      booked_by: "Gebucht von"
+      logout: "Abmelden"
+      admin_booker: "**Für Administratoren sind alle Felder optional.**"
+    booker_form:
+      booker_email_label: "Ihre email Adresse"
+      user_options_html: "You can %{login_link} if you have a password, or %{set_password_link} if you'll be booking again."
+      set_password_option: "Passwort festlegen"
+      login_option: "anmelden"
+      set_password_label: "Passwort festlegen"
+      set_password_help: "Ein Passwort ist optional, ist aber hilfreich, wenn mehrere Buchungen getätigt werden."
+      cancel_set_password: "Abbrechen"
+      enter_password_label: "Passwort eingeben"
+      signin_button: "Anmelden"
+      reset_password_link: "Passwort vergessen?"
+      cancel_enter_password: "Abbrechen"
+    update:
+      validation_error: "Bitte überprüfen Sie Ihre Daten"
+
+  booking_payments:
+    edit:
+      no_payment_required: "Keine Zahlung erforderlich."
+    summary_table:
+      title: "Zahlung"
+      booking_fee: "Buchungsgebühr"
+      total_to_pay: "Gesamtsumme"
+    form:
+      payment_complete: "Zahlung durchgeführt. Vielen Dank!"
+    offline_payment:
+      title: "Offline Zahlung"
+      admin_booker: "Als Administrator können Sie die online Zahlung übergehen. Bitte stimmen Sie im Namen Ihres Kunden zur offline Zahlung zu."
+      agree_text: "Ich bin einverstanden den Betrag zu bezahlen"
+      agree_button: "Später bezahlen"
+      agreed: "Sie sind einverstanden, später zu bezahlen. Vielen Dank!"
+    check_payment:
+      payment_successful: "Zahlung erhalten. Vielen Dank!"
+    update:
+      agreement_accepted: "Vielen Dank!"
+    paypal_payment:
+      payment_help: "**Zahlen Sie mit Kredit- oder Bankomatkarte** indem Sie auf die Schalftläche klicken, danach auf '**Als Gast bezahlen**'."
+      verifying_payment: "Zahlung wird verifiziert. Bitte warten..."
+
+  tickets_helper:
+    day: "Tag"
+    cost: "Kosten:"
+    offline: "Offline"
+    status: "Status: %{status}"
+    available_num: "Anzahl verfügbar:"
+    available_from: "Verfügbar von:"
+    available_from_text: "**%{days}** davor um **%{time}**"
+    available_to: "Verfügbar bis:"
+    available_to_text: "**%{days}** davor um **%{time}**"
+    group_ticket_summary: "Gruppenticket für %{range} Personen"
+    availability_summary_noc: "%{number} verfügbar von %{opens} bis %{closes}"
+    availability_summary_n: "%{number} verfügbar"
+    availability_summary_no: "%{number} verfügbar ab %{opens}"
+    availability_summary_nc: "%{number} verfügbar bis %{closes}"
+    availability_summary_oc: "verfügbar von %{opens} bis %{closes}"
+    availability_summary_o: "verfügbar ab %{opens}"
+    availability_summary_c: "verfügbar bis %{closes}"
+
+  image_uploads:
+    create:
+      upload_error: "Es gab ein Problem beim Hochladen des Bildes. Bitte kontaktieren Sie support@bookwhen.com"
+
+  errors:
+    messages:
+      carrierwave_processing_error: "Fehler bei der Verarbeitung"
+      carrierwave_integrity_error: "ist kein erlaubter Dateityp"
+      carrierwave_download_error: "konnte nicht heruntergeladen werden"
+      extension_white_list_error: "Datein des Typs '%{extension}' sind nicht erlaubt. Bitte versuchen Sie stattdessen %{allowed_types}."
+      mime_types_processing_error: "Fehler bei der Verarbeitung der Datei mit MIME::Types, eventuell ungültiger Inhalt? Originaler Fehler: %{e}"
+      mini_magick_processing_error: "Fehler bei der Verarbeitung mit MiniMagick, eventuell kein Bild? Originaler Fehler: %{e}"
