@@ -1,0 +1,294 @@
+# Translation information:
+# 
+#  - Only translate the parts in quotes "like this".
+#  - All values must be kept in the same order with the same indentation and gaps.
+#  - Parts of text looking like this %{code} must not be changed as they are used
+#    for merging. They may be repositioned to make the sentence structure correct.
+#  - Things like &copy; are HTML codes that translate to symbols on the page.
+#  - \n is a code for a new line.
+#  - Text surrounded by ** becomes bold (but not everywhere).
+#  - URLs (links) should be kept the same.
+# 
+#    Thank you!
+
+en-GB:
+
+  org:
+    name: "Bookwhen Ltd"
+    link: "http://bookwhen.com"
+
+  controllers:
+    concerns:
+      site_concern:
+        site_not_found: "Page not found"
+      user_concern:
+        token_expired: "User token expired. Please log in again."
+        admin_only: "This is an admin only function."
+      booking_concern:
+        booking_required: "Booking not found"
+
+  sites:
+    title_bar:
+      save_changes: "Save changes"
+      title_label: "Main page title"
+      description_label: "General information"
+      setup_theme_title: "Public schedule list"
+      setup_theme_desc: |
+        **_READ ME:_** Change this title text and set your logo and header images using the **'Edit page'** button in the top right.
+
+  general:
+    api_error: "Something went wrong! We've been notified and are looking into it. Please try again later."
+    cookie_error: "Cookies must be enabled to make a booking. Try reloading the page."
+    show_more_text: "[Read more]"
+
+  duration:
+    days:
+      one: "1 day"
+      other: "%{count} days"
+    weeks:
+      one: "1 week"
+      other: "%{count} weeks"
+
+  login:
+    failed: "or email were wrong."
+
+  layouts:
+    title:
+      default: "Upcoming events"
+      postfix: "Booking by Bookwhen"
+    header:
+      login: "Login"
+      logout: "Logout"
+      edit_page: "Edit page"
+      admin_site: "Admin"
+      set_header_photo: "Set header photo"
+      delete_header_photo: "Delete"
+      delete_header_photo_confirm: "Are you sure you want to remove the banner image?"
+      set_logo: "Set logo"
+      delete_logo: "Delete"
+      delete_logo_confirm: "Are you sure you want to remove the logo?"
+    breadcrumbs:
+      schedule: "Schedule"
+      event: "Event"
+      course: "Course"
+      basket: "Selected items"
+      form: "Details"
+      password: "Password"
+      payment: "Payment"
+      done: "Done"
+      complete: "Complete"
+    footer:
+      copyright: "Copyright &copy; %{year} %{org_link}"
+      about: "About"
+      privacy: "Privacy Policy"
+      terms: "Terms of Service"
+
+  oauth:
+    oauth:
+      callback:
+        logged_in: "Logged in"
+      logout:
+        logged_out: "Logged out"
+
+  sessions:
+    destroy:
+      session_destroyed: "Logged out"
+
+  agenda_list:
+    show:
+      from_date: "From %{date}"
+      from_today: "Select date"
+      timezone_info: "Times shown in timezone: %{zone}"
+    rows:
+      no_records: "No events"
+    row:
+      fully_booked: "Fully booked"
+      user_booked: "You are booked onto this event"
+    foot:
+      show_more: "Show more..."
+      
+  events:
+    show:
+      not_found: "The event couldn't be found"
+
+  courses:
+    show:
+      not_found: "The course couldn't be found"
+
+  baskets:
+    show:
+      basket_error: "There was a problem accessing your selected items. Please try again later or contact support@bookwhen.com"
+      basket_empty: "Your basket is empty. Return to the [schedule list](%{home_path})."
+      start_checkout: "Book now"
+      start_checkout_wait: "Please wait..."
+      start_booking_info: |
+        - Your places will be reserved when you start the booking.
+        - Attendee details and a payment (if any) are required to complete the booking.
+      not_found: "Some items have been removed from your basket as they were no longer available. Please go back to the schedule list to try and add them again. Thank you."
+      no_items: "The items that were in your basket are no longer available. Please go back to the schedule list to try and add them again. Thank you."
+    table:
+      title: "Selected items"
+      tickets_cost: "Tickets total"
+      booking_fee: "Booking fee"
+      total_cost: "Total cost of booking"
+      delete_item: "Remove this item"
+      confirm_delete: "Are you sure you want to remove this item from your basket?"
+    row:
+      attendee_counts: "(%{counts} people)"
+    show_button:
+      start_booking: "Proceed"
+
+  select_button:
+    new_booking: "Select"
+    unavailable: "Unavailable"
+    number_added: "%{count}"
+    increment: "+"
+    no_more: "+"
+    decrement: "-"
+    sold_out: "Sold out"
+    group_info:
+      "%{ticket_count}, %{person_count}"
+    ticket:
+      one: "1 ticket"
+      other: "%{count} tickets"
+    person:
+      one: "1 person"
+      other: "%{count} people"
+
+  event_course:
+    preview:
+      view: "View Details"
+      course_summary_info: "**Course** with **%{total}** dates:"
+      tickets_list: "Tickets / Booking types"
+      spaces_available: "%{spaces} spaces available"
+      only_spaces_available: "Only %{spaces} spaces left"
+      last_space_available: "Only 1 space left"
+      no_spaces_available: "Fully booked"
+      one_slot_open: "Single place available"
+      one_slot_closed: "Place already booked"
+    show:
+      course_summary_info: "**Course** with **%{total}** dates:"
+      details: "Details"
+      tickets: "Tickets / Booking types"
+      location: "Location"
+      cost: "Cost"
+      fee: "Fee"
+    details_summary:
+      details: "Details"
+      attachments: "Documents"
+
+  bookings:
+    create:
+      basket_empty_error: "Your basket appears to be empty. Try reloading the page."
+      validation_error: "Booking can't be started"
+    complete_banner:
+      title: "Booking Complete"
+      booking_ref: "Booking reference:"
+      footer_text: |
+        You can access your booking using the link in the confirmation email.
+        
+        Thank you for your booking.
+    cancelled_banner:
+      title: "Booking Cancelled"
+      booking_ref: "Booking reference:"
+      footer_text: |
+        The booking has been cancelled.
+    overview:
+      booked_by: "Booked by:"
+      title: "Booking details"
+      person: "person"
+    post_booking_info:
+      title: "Additional information"
+    cancel:
+      error: "The cancellation failed."
+      
+  booking_passwords:
+    form:
+      title: "Booking password"
+      password_label: "Event password"
+      password_help: "Please enter the password for this event."
+      continue: "Continue"
+    update:
+      passwords_ok: "Password verified"
+
+  booking_details:
+    form:
+      booking_fields: "Booking details"
+      attendee_number: "%{ordinalized_number} attendee"
+      booker_label: "Is this you?"
+      booker_help: "Tick if you're booking for yourself."
+      no_attendee_fields: "No attendee details required."
+      continue: "Continue"
+    person_booking:
+      booked_by: "Booked by"
+      logout: "Logout"
+      admin_booker: "**All fields are optional as you are the administrator.**"
+    booker_form:
+      booker_email_label: "Your email address"
+      user_options_html: "You can %{login_link} if you have a password, or %{set_password_link} if you'll be booking again."
+      set_password_option: "set a password"
+      login_option: "login"
+      set_password_label: "Set a password"
+      set_password_help: "This is optional, but useful if you'll be making more bookings later."
+      cancel_set_password: "Cancel"
+      enter_password_label: "Enter your password"
+      signin_button: "Login"
+      reset_password_link: "Forgotten password?"
+      cancel_enter_password: "Cancel"
+    update:
+      validation_error: "Please review your submission"
+
+  booking_payments:
+    edit:
+      no_payment_required: "No payment is required."
+    summary_table:
+      title: "Payment"
+      booking_fee: "Booking fee"
+      total_to_pay: "Total cost"
+    form:
+      payment_complete: "Payment complete. Thank you."
+    offline_payment:
+      title: "Offline payment"
+      admin_booker: "You're making this booking as the administrator which allows you to bypass the online payment. Please accept the offline payment agreement on behalf of your customer to continue."
+      agree_text: "I agree to pay the owed amount"
+      agree_button: "Pay later"
+      agreed: "You have agreed to pay later. Thank you."
+    check_payment:
+      payment_successful: "Payment received. Thank you."
+    update:
+      agreement_accepted: "Thank you"
+    paypal_payment:
+      payment_help: "**Pay by debit or credit card** by clicking the button then '**buy as a guest**'."
+      verifying_payment: "Verifying payment. Please wait..."
+
+  tickets_helper:
+    day: "day"
+    cost: "Cost:"
+    offline: "Offline"
+    status: "Status: %{status}"
+    available_num: "Number available:"
+    available_from: "Available from:"
+    available_from_text: "**%{days}** before at **%{time}**"
+    available_to: "Available until:"
+    available_to_text: "**%{days}** before at **%{time}**"
+    group_ticket_summary: "Group ticket for %{range} people"
+    availability_summary_noc: "%{number} available between %{opens} and %{closes}"
+    availability_summary_n: "%{number} available"
+    availability_summary_no: "%{number} available after %{opens}"
+    availability_summary_nc: "%{number} available until %{closes}"
+    availability_summary_oc: "Available between %{opens} and %{closes}"
+    availability_summary_o: "Available after %{opens}"
+    availability_summary_c: "Available until %{closes}"
+
+  image_uploads:
+    create:
+      upload_error: "There was a problem uploading your image. Please contact support@bookwhen.com"
+
+  errors:
+    messages:
+      carrierwave_processing_error: "failed to be processed"
+      carrierwave_integrity_error: "is not an allowed file type"
+      carrierwave_download_error: "could not be downloaded"
+      extension_white_list_error: "Files of type '%{extension}' aren't allowed sorry. Try %{allowed_types} instead."
+      mime_types_processing_error: "Failed to process file with MIME::Types, maybe not valid content-type? Original Error: %{e}"
+      mini_magick_processing_error: "Failed to manipulate with MiniMagick, maybe it is not an image? Original Error: %{e}"

@@ -1,2 +1,1 @@
-# i18n
-Language files
+Language files for [bookwhen](https://admin.bookwhen.com/signup).
