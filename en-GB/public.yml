@@ -29,17 +29,17 @@ en-GB:
 
   sites:
     title_bar:
-      save_changes: "Save changes"
+      save_changes: "Save header text"
       title_label: "Main page title"
       description_label: "General information"
-      setup_theme_title: "Public schedule list"
-      setup_theme_desc: |
-        **_READ ME:_** Change this title text and set your logo and header images using the **'Edit page'** button in the top right.
 
   general:
     api_error: "Something went wrong! We've been notified and are looking into it. Please try again later."
-    cookie_error: "Cookies must be enabled to make a booking. Try reloading the page."
+    null_session: "Session not found! Cookies must be enabled to make a booking. Or try reloading your browser."
     show_more_text: "[Read more]"
+
+  money:
+    plus_tax: "%{amount} + tax"
 
   duration:
     days:
@@ -59,24 +59,19 @@ en-GB:
     header:
       login: "Login"
       logout: "Logout"
-      edit_page: "Edit page"
-      admin_site: "Admin"
-      set_header_photo: "Set header photo"
-      delete_header_photo: "Delete"
-      delete_header_photo_confirm: "Are you sure you want to remove the banner image?"
-      set_logo: "Set logo"
-      delete_logo: "Delete"
-      delete_logo_confirm: "Are you sure you want to remove the logo?"
+      edit_page: "Page Settings"
+      admin_site: "Admin site"
+      view_bookings: "View bookings"
     breadcrumbs:
       schedule: "Schedule"
       event: "Event"
-      course: "Course"
       basket: "Selected items"
       form: "Details"
       password: "Password"
       payment: "Payment"
       done: "Done"
       complete: "Complete"
+      exit: "Exit booking system"
     footer:
       copyright: "Copyright &copy; %{year} %{org_link}"
       about: "About"
@@ -106,19 +101,11 @@ en-GB:
       user_booked: "You are booked onto this event"
     foot:
       show_more: "Show more..."
-      
-  events:
-    show:
-      not_found: "The event couldn't be found"
-
-  courses:
-    show:
-      not_found: "The course couldn't be found"
 
   baskets:
     show:
       basket_error: "There was a problem accessing your selected items. Please try again later or contact support@bookwhen.com"
-      basket_empty: "Your basket is empty. Return to the [schedule list](%{home_path})."
+      basket_empty: "You have no selected items. Return to the [schedule list](%{home_path})."
       start_checkout: "Book now"
       start_checkout_wait: "Please wait..."
       start_booking_info: |
@@ -128,15 +115,42 @@ en-GB:
       no_items: "The items that were in your basket are no longer available. Please go back to the schedule list to try and add them again. Thank you."
     table:
       title: "Selected items"
-      tickets_cost: "Tickets total"
-      booking_fee: "Booking fee"
-      total_cost: "Total cost of booking"
+      total_tax: "Added tax"
+      total_cost: "Total cost of tickets"
+      booking_fee_online: "An additional fee of **%{fee}** will be added to the total to cover the online payment charges."
+      booking_fee_offline: "An additional fee of **%{fee}** will be added to the total cost if you choose to pay at a later date."
+      booking_fee_both: |
+        An additional fee will be added depending on the method of payment.
+        Online payment: **%{online_fee}**
+        Alternative payment method: **%{offline_fee}**
       delete_item: "Remove this item"
       confirm_delete: "Are you sure you want to remove this item from your basket?"
+      discount: "Discount"
+      discounts: "Discounts"
+      delete_code: "Delete code"
+      valid_rule: "Discount rule '%{code}' automatically applied for %{value} off."
+      valid_code: "Code '%{code}' used for %{value} off."
+      invalid_code: "Code '%{code}' invalid: %{reason}"
+      invalid_reason:
+        not_found: "Not found."
+        expired: "Code expired."
+        used: "Code already used."
+        no_match: "Doesn't apply to the selected tickets."
+        overlap: "Can't be used in conjunction with the other discounts."
     row:
       attendee_counts: "(%{counts} people)"
     show_button:
       start_booking: "Proceed"
+
+  discount_codes:
+    form:
+      show_link: "Add a discount code"
+      code_label: "Discount code"
+      submit: "Submit code"
+    create:
+      code_added: "Code submitted"
+    destroy:
+      code_removed: "Code removed"
 
   select_button:
     new_booking: "Select"
@@ -155,19 +169,21 @@ en-GB:
       one: "1 person"
       other: "%{count} people"
 
-  event_course:
+  events:
     preview:
       view: "View Details"
-      course_summary_info: "**Course** with **%{total}** dates:"
       tickets_list: "Tickets / Booking types"
       spaces_available: "%{spaces} spaces available"
       only_spaces_available: "Only %{spaces} spaces left"
       last_space_available: "Only 1 space left"
       no_spaces_available: "Fully booked"
+      reserved_for_waiting_list: "Reserved for waiting list"
       one_slot_open: "Single place available"
       one_slot_closed: "Place already booked"
+      one_slot_reserved: "Place reserved for waiting list"
+      join_waiting_list: "Join waiting list"
     show:
-      course_summary_info: "**Course** with **%{total}** dates:"
+      not_found: "The event couldn't be found"
       details: "Details"
       tickets: "Tickets / Booking types"
       location: "Location"
@@ -176,6 +192,26 @@ en-GB:
     details_summary:
       details: "Details"
       attachments: "Documents"
+    connected_events:
+      title: "Course dates"
+
+  waiters:
+    create:
+      success_message: "You're the %{position_ordinal} person on the list. We've sent you an email with some more details. Thank you."
+      added_flash: "You're now on the list"
+    form:
+      title: "Waiting list"
+      waiting_list_help: |
+        This event is fully booked, but you can add yourself to the waiting list.
+        
+        Enter your details below to be informed by email when a place becomes available. You must respond promptly to the email to secure a place if one becomes available.
+      email_label: "Email address"
+      email_help: "You will be notified by email if a space becomes available."
+      name_label: "Your name"
+      name_help: ""
+      phone_label: "Contact number"
+      phone_help: "This is optional but may be useful for the event organiser."
+      submit: "Submit details"
 
   bookings:
     create:
@@ -201,13 +237,14 @@ en-GB:
       title: "Additional information"
     cancel:
       error: "The cancellation failed."
-      
+
   booking_passwords:
     form:
       title: "Booking password"
       password_label: "Event password"
       password_help: "Please enter the password for this event."
-      continue: "Continue"
+      submit_password: "Continue"
+      submit_password_wait: "Please wait..."
     update:
       passwords_ok: "Password verified"
 
@@ -218,7 +255,8 @@ en-GB:
       booker_label: "Is this you?"
       booker_help: "Tick if you're booking for yourself."
       no_attendee_fields: "No attendee details required."
-      continue: "Continue"
+      submit_details: "Continue"
+      submit_details_wait: "Please wait..."
     person_booking:
       booked_by: "Booked by"
       logout: "Logout"
@@ -242,30 +280,105 @@ en-GB:
     edit:
       no_payment_required: "No payment is required."
     summary_table:
-      title: "Payment"
-      booking_fee: "Booking fee"
-      total_to_pay: "Total cost"
+      title: "Costs & Payment"
+      total_cost_no_fees: "Total cost of booking"
+      total_cost_excluding_fees: "Cost of tickets"
+      stripe_fee_title: "Online payment total"
+      stripe_fee_desc: "This includes an additional online processing fee of %{amount}"
+      paypal_fee_title: "Online payment total"
+      paypal_fee_desc: "This includes an additional online processing fee of %{amount}"
+      offline_fee_title: "Offline payment total"
+      offline_fee_desc: "This includes an additional charge of %{amount}"
     form:
       payment_complete: "Payment complete. Thank you."
     offline_payment:
       title: "Offline payment"
-      admin_booker: "You're making this booking as the administrator which allows you to bypass the online payment. Please accept the offline payment agreement on behalf of your customer to continue."
-      agree_text: "I agree to pay the owed amount"
+      admin_booker: "**You're making this booking as the administrator** which allows you to bypass the online payment. Please accept the offline payment agreement on behalf of your customer to continue."
+      agree_text: "I agree to pay %{amount}"
       agree_button: "Pay later"
+      agree_button_wait: "Pay later"
       agreed: "You have agreed to pay later. Thank you."
+    online_payment:
+      title: "Online payment"
+      total: "Total to be paid: %{amount}"
+      verifying_payment: "Verifying payment. Please wait..."
+      booking_expired: "Your booking reservation has expired and the place is no longer available!"
+    stripe_payment:
+      payment_help: |
+        **Pay by card** using the button below.
+      pay_by_card_button: "Pay by card"
+    paypal_payment:
+      payment_help: |
+        You do not need a PayPal account to make a payment:
+        
+        **Pay by card** by clicking the PayPal button then '**Pay with a debit or credit card**'.
+      button_alt: "Pay with PayPal"
+    process_stripe_token:
+      payment_error_flash: "Payment failed!"
+      system_error_flash: "Payment error!"
+      system_error_message: "There was a problem processing your payment! Please contact support@bookwhen.com for assistance. Sorry for the trouble."
     check_payment:
       payment_successful: "Payment received. Thank you."
+    check_expired:
+      booking_expired: "Booking expired"
     update:
       agreement_accepted: "Thank you"
-    paypal_payment:
-      payment_help: "**Pay by debit or credit card** by clicking the button then '**buy as a guest**'."
-      verifying_payment: "Verifying payment. Please wait..."
+
+  themes:
+    button:
+      link_text: "Book online"
+      title: "Book online"
+      alt: "Book online"
+    edit:
+      title: "Public page settings"
+      theme_help: "Manage the way your public page looks and works."
+      edit_url: "Change your page URL..."
+      save_url_change: "Update URL"
+      cancel_edit_url: "Cancel"
+      page_url_postfix_label: "Public page URL"
+      page_url_postfix_help: ""
+      public_page_label: "Your **Public page URL** is:"
+      html_links_label: "HTML code for your page:"
+      anchor_link_label: "Standard link"
+      button_link_label: "Button link"
+      iframe_code_label: "Embedded iframe"
+      button_preview: "Button preview:"
+      show_spaces_yn_label: "Show availability?"
+      show_spaces_yn_help: "Show numbers of spaces and tickets available? (Otherwise only shown when the event almost full.)"
+      schedule_row_count_label: "Schedule row count:"
+      schedule_row_count_help: "How many rows would you like to show in the schedule list by default?"
+      exit_url_label: "Link back to your website?"
+      exit_url_help: "Enter a valid URL to show a prominent 'Exit booking system' link."
+      bg_colour_hex_label: "Page background colour:"
+      bg_colour_hex_help: "Select a background colour for your page."
+      set_logo: "Set logo"
+      delete_logo: "Delete"
+      delete_logo_confirm: "Are you sure you want to remove the logo?"
+      upload_logo_label: "Upload logo image:"
+      upload_logo_help: "The logo is displayed in the top left of your page."
+      set_header_photo: "Set banner image"
+      delete_header_photo: "Delete"
+      delete_header_photo_confirm: "Are you sure you want to remove the header photo?"
+      upload_banner_label: "Upload banner image:"
+      upload_banner_help: "The image is stretched to fit the width of the page with the height depending on your logo height."
+      save_options: "Save settings"
+      cancel_button: "Close"
+      html_links_leading_help: |
+        This public bookwhen page is where you should direct people to make a booking. Use the options below to link to your page.
+      update_url_info: |
+        **Please note**: Updating the URL will stop any existing links to your public page from working.
+    update_url:
+      url_updated: "Page URL updated"
+      url_not_allowed: "is already in use or not allowed."
+    update_options:
+      options_updated: "Settings updated. Refresh page to see effect."
 
   tickets_helper:
     day: "day"
     cost: "Cost:"
     offline: "Offline"
     status: "Status: %{status}"
+    course_summary_info: "This ticket is for **all %{total} dates**."
     available_num: "Number available:"
     available_from: "Available from:"
     available_from_text: "**%{days}** before at **%{time}**"
@@ -292,3 +405,13 @@ en-GB:
       extension_white_list_error: "Files of type '%{extension}' aren't allowed sorry. Try %{allowed_types} instead."
       mime_types_processing_error: "Failed to process file with MIME::Types, maybe not valid content-type? Original Error: %{e}"
       mini_magick_processing_error: "Failed to manipulate with MiniMagick, maybe it is not an image? Original Error: %{e}"
+
+  activemodel:
+    attributes:
+      discount_code_form:
+        raw_code: "Code"
+      page_url_form:
+        page_url_postfix: "Code"
+      page_options_form:
+        schedule_row_count: "Row count"
+        exit_url: "URL"
