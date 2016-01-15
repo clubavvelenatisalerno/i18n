@@ -20,23 +20,23 @@ en-GB:
   controllers:
     concerns:
       site_concern:
-        site_not_found: "Page not found"
+        site_not_found: "Pagina non trovata"
       user_concern:
-        token_expired: "User token expired. Please log in again."
-        admin_only: "This is an admin only function."
+        token_expired: "Sezione utente scaduta. Perfavore riesegui il log in."
+        admin_only: "Funzione valida solo per l'amministratore."
       booking_concern:
-        booking_required: "Booking not found"
+        booking_required: "Prenotazione non trovata"
 
   sites:
     title_bar:
-      save_changes: "Save header text"
-      title_label: "Main page title"
-      description_label: "General information"
+      save_changes: "Salva il testo dell'intestazione"
+      title_label: "Titolo della pagina principale"
+      description_label: "Informationi Generali"
 
   general:
-    api_error: "Something went wrong! We've been notified and are looking into it. Please try again later."
+    api_error: "Qualcosa non ha funzionato! We've been notified and are looking into it. Please try again later."
     null_session: "Session not found! Cookies must be enabled to make a booking. Or try reloading your browser."
-    show_more_text: "[Read more]"
+    show_more_text: "[Leggi di più]"
 
   money:
     plus_tax: "%{amount} + tax"
